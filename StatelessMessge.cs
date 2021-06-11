@@ -31,7 +31,11 @@ namespace Authenticare.Function
                 });
  
         }
-
+/// <summary>
+/// Hi this is test for CICD
+/// </summary>
+/// <param name="reponsePayload"></param>
+/// <returns></returns>
          private ActionResult resultSet(string reponsePayload)
         {
             var returnContent = new ContentResult();
