@@ -32,7 +32,7 @@ namespace Authenticare.Function
  
         }
 /// <summary>
-/// Hi this is test for CICD, JUne 18.30PM
+/// Hi this is test for CICD, JUne 18.30PM..
 /// </summary>
 /// <param name="reponsePayload"></param>
 /// <returns></returns>
