@@ -14,6 +14,9 @@ using System.Configuration;
 
 namespace Authenticare.Function
 {
+ /// <summary>
+ /// This is test for CICD 14/06 20:09BST
+ /// </summary>
     public class Authenticare
     {
         private HttpRequest _req;
