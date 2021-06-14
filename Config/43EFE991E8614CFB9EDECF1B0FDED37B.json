@@ -1,0 +1,70 @@
+{
+    "Id": "AzureTableStorageProcess",
+    "LineOfBusinessProcessData": [
+        {
+            "Key": "object",
+            "Type": "Xenhey.BPM.Core.Processes.ProcessData"
+        }
+    ],
+    "Type": "",
+    "DataFlowProcess": [
+        {
+            "Key": "Authenticare-Copy-From-Source-To-Destination",
+            "Type": "Xenhey.BPM.Core.Processes.BlobStorageWriteProcess",
+            "Async": "false",
+            "IsEnable": "true",
+            "DataFlowProcessParameters": [
+                {
+                    "Key": "BlobStorageConnectionString",
+                    "Value": "AzureWebJobsStorage"
+                },
+                {
+                    "Key": "SourceContainer",
+                    "Value": "stagingdata"
+                },
+                {
+                    "Key": "DestinationContainer",
+                    "Value": "adfdata"
+                },
+                {
+                    "Key": "folderName",
+                    "Value": "AdfSapmpleJson"
+                },
+                {
+                    "Key": "TimeZone",
+                    "Value": "Eastern Standard Time"
+                },
+                {
+                    "Key": "hour",
+                    "Value": "-1"
+                },
+                {
+                    "Key": "CopySourceToDestination",
+                    "Value": "yes"
+                },
+				
+                {
+                    "Key": "dateformat",
+                    "Value": "yyyy/MM/dd/HH"
+                },
+                {
+                    "Key": "ContentType",
+                    "Value": "application/json"
+                }
+            ]
+        },
+		{
+            "Key": "Authenticare-Sucess-Write-To-Blob-Storage",
+            "Type": "Xenhey.BPM.Core.Processes.SuccessStatusProcess",
+            "Async": "false",
+            "IsEnable": "true",
+            "DataFlowProcessParameters": [
+                {
+                    "Key": "Message",
+                    "Value": "File was Successfully Copy to ADF Staging Folder"
+                }
+            ]
+        }
+
+    ]
+}
