@@ -9,6 +9,9 @@
     <PackageReference Include="Xenhey.BPM.Core.DotNet" Version="9.0.3" />
   </ItemGroup>
   <ItemGroup>
+    <None Update="Config\43EFE991E8614CFB9EDECF1B0FDED37B.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="host.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
