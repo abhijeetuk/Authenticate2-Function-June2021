@@ -18,10 +18,11 @@
                     "Key": "BlobStorageConnectionString",
                     "Value": "AzureWebJobsStorage"
                 },
-                {
-                    "Key": "SourceContainer",
-                    "Value": "stagingdata"
-                },
+              {
+
+                "Key": "SourceContainer",
+                "Value": "stagingdata"
+              },
                 {
                     "Key": "DestinationContainer",
                     "Value": "adfdata"
